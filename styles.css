@@ -1,30 +1,25 @@
 body {
-
     margin: 0;
     padding: 50px;
     font-family: Arial, sans-serif;
 
     /* Устанавливаем фон */
     background: url('universitet.jpeg') no-repeat center center fixed;
-
-    /* Размер изображения на 100% экрана */
     background-size: cover;
-
-    /* Цвет на случай, если изображение не загрузится */
-    background-color: #136336;
-    
-   
+    background-color: #136336; /* На случай, если изображение не загрузится */
 }
 
 .container {
     display: flex;
     height: 100vh;
-    flex-wrap: wrap; /* Позволяет частям переноситься на новые строки */
+    justify-content: space-between; /* Равномерное распределение колонок */
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+    gap: 20px; /* Добавляем пространство между блоками */
 }
 
 /* Левая часть */
 .left-side {
-    width: 50%;
+    width: 48%; /* Чуть меньше 50%, чтобы оставить место для отступа */
     padding: 20px;
     box-sizing: border-box;
 }
@@ -36,48 +31,129 @@ h1 {
     border-radius: 5px;
 }
 
-.dropdown-group {
-    margin-bottom: 10px;
+/* Линия с кнопками */
+.button-row {
+    display: flex;
+    justify-content: space-between; /* Равное распределение кнопок */
+    margin-bottom: 20px;
 }
 
-label {
-    display: block;
+.dropdown-btn {
+    flex: 1; /* Равная ширина кнопок */
+    margin: 0 5px; /* Отступы между кнопками */
+    padding: 10px 15px;
+    font-size: 16px;
     font-weight: bold;
+    color: white;
+    background-color: #007f3f; /* Цвет кнопки */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-select {
-    width: 100%;
+.dropdown-btn:hover {
+    background-color: #005f2d; /* Цвет при наведении */
+}
+
+/* Строка поиска */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #ffffffcc;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     padding: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Таблица */
-.schedule-table, .time-table {
+.search-icon {
+    width: 1px;
+    height: 1px;
+    margin-right: 1px;
+}
+
+#search-input {
+    flex: 1; /* Расширяет поле ввода на всю доступную ширину */
+    border: none;
+    font-size: 16px;
+    outline: none;
+}
+
+.clear-btn {
+    font-size: 18px;
+    color: #999;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+.clear-btn:hover {
+    color: #555;
+}
+
+/* Стили для таблицы */
+.schedule-table {
     width: 100%;
-    margin-top: 20px;
     border-collapse: collapse;
+    margin-top: 20px;
 }
 
-.schedule-table th, .schedule-table td,
-.time-table td {
+.schedule-table th, .schedule-table td {
     border: 1px solid #000;
-    padding: 5px;
+    padding: 1px;
     text-align: center;
+    font-size: 20px;
 }
 
 .schedule-table th {
     background-color: #ddd;
+    font-weight: bold;
+}
+ .coffe-cell:hover{
+    background-color: #a07826;
+}
+ .green-cell:hover{
+    background-color: #1ab937;
+}
+ .blue-cell:hover{
+    background-color: #5bbed4;
+}
+ .violet-cell:hover{
+    background-color: #dea5eb;
+}
+ .bej-cell:hover{
+    background-color: #e3e38d;
+}
+ .pink-cell:hover{
+    background-color: #cd4d80;
+}
+ .sky-cell:hover{
+    background-color: #4ebcc8;
+}
+ .salad-cell:hover {
+    background-color: #84ff00;
 }
 
+/* Изменение цвета строки при наведении */
+.schedule-table tr:not(:first-child):hover {
+    background-color: #f8ffe5; /* Лимонно-белый цвет */
+    transition: background-color 0.3s ease; /* Плавный переход */
+}
 /* Правый блок */
 .right-side {
-    width: 50%; /* Правая половина экрана */
-    padding: 50px;
-    background-color: #f9f9f900;
+    width: 48%; /* Аналогично левой стороне */
+    padding: 20px; /* Сокращаем отступы для баланса */
+    box-sizing: border-box;
+    border-radius: 8px; /* Скругленные углы */
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: -5px 0 10px;
-    overflow-y: auto; /* Вертикальный скроллинг, если контент превышает высоту */
+    overflow-y: auto; /* Скроллинг, если контент выходит за пределы */
 }
 
 /* Заголовок */
@@ -94,8 +170,6 @@ select {
     width: 100%;
     max-width: 600px;
     margin: auto;
-    background-color: #fff;
-    border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
 }
