@@ -7,6 +7,138 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <div class="container">
+        <!-- Левая часть -->
+        <div class="left-side">
+            <h1>ORAR</h1>
+
+            <!-- Кнопки с выпадающими списками -->
+            <div class="dropdown-group">
+                <label for="groups">Grupe:</label>
+                <select id="groups">
+                    <option value="MI21Z">MI21Z</option>
+                    <option value="IT21Z">IT21Z</option>
+                    <option value="IS21Z">IS21Z</option>
+                    <option value="MI11Z">MI11Z</option>
+                    <option value="IT11Z">IT11Z</option>
+                    <option value="IS11Z">IS11Z</option>
+                </select>
+            </div>
+
+            <div class="dropdown-group">
+                <label for="teachers">Profesori:</label>
+                <select id="teachers">
+                    <option value="Chilat Sergiu">Chilat Sergiu</option>
+                    <option value="Gorea Adela">Gorea Adela</option>
+                    <option value="Ticau Vitalie">Ticau Vitalie</option>
+                    <option value="Popov Lidia">Popov Lidia</option>
+                </select>
+            </div>
+
+            <div class="dropdown-group">
+                <label for="rooms">Aule:</label>
+                <select id="rooms">
+                    <!-- Кабинеты с 100 по 160 -->
+                    <option value="100">100</option>
+                    <option value="101">101</option>
+                    <option value="102">102</option>
+                    <option value="103">103</option>
+                    <option value="104">103</option>
+                    <option value="105">103</option>
+                    <option value="106">103</option>
+                    <option value="107">103</option>
+                    <option value="108">103</option>
+                    <option value="109">103</option>
+                    <option value="110">103</option>
+                </select>
+            </div>
+
+            <div class="dropdown-group">
+                <select id="days">
+                    <option value="Luni">Luni</option>
+                    <option value="Marți">Marți</option>
+                    <option value="Miercuri">Miercuri</option>
+                    <option value="Joi">Joi</option>
+                    <option value="Vineri">Vineri</option>
+                    <option value="Sâmbăta">Sâmbăta</option>
+                    <option value="Duminică">Duminică</option>
+                </select>
+            </div>
+
+            <div class="dropdown-group">
+                <select id="weeks">
+                    <option value="1">1 (2.9.2024-8.9.2024)</option>
+                    <option value="2">2 (9.9.2024-15.9.2024)</option>
+                    <option value="3">3 (16.9.2024-22.9.2024)</option>
+                    <option value="4">4 (23.9.2024-29.9.2024)</option>
+                    <option value="5">5 (30.9.2024-6.10.2024)</option>
+                    <option value="6">6 (7.10.2024-13.10.2024)</option>
+                    <option value="7">7 (14.10.2024-20.10.2024)</option>
+                    <option value="8">8 (21.10.2024-27.10.2024)</option>
+                    <option value="9">9 (28.10.2024-3.11.2024)</option>
+                    <option value="10">10 (4.11.2024-10.11.2024)</option>
+                    <option value="11">11 (11.11.2024-17.11.2024)</option>
+                    <option value="12">12 (18.11.2024-24.11.2024)</option>
+                    <option value="13">13 (25.11.2024-1.12.2024)</option>
+                    <option value="14">14 (2.12.2024-8.12.2024)</option>
+                    <option value="15">15 (9.12.2024-15.12.2024)</option>
+                    <option value="16">16 (16.12.2024-22.12.2024)</option>
+                    <option value="17">17 (23.12.2024-29.12.2024)</option>
+                    <option value="18">18 (30.12.2024-5.1.2025)</option>
+                    <option value="19">19 (6.1.2025-12.1.2025)</option>
+                    <option value="20">20 (13.1.2025-19.1.2025)</option>
+                    <option value="21">21 (20.1.2025-26.1.2025)</option>
+                    <option value="22">22 (27.1.2025-2.2.2025)</option>
+                </select>
+            </div>
+
+            <!-- Таблица 8x8 -->
+            <table class="schedule-table">
+                <tr>
+                    <th></th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                </tr>
+                <tr>
+                    <th>L-25</th>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <th>M-26</th>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <th>Mi-27</th>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <th>J-28</th>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <th>V-29</th>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <th>S-30</th>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <th>D-1</th>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>                
+            </table>
+
+            <div class="info">
+                <p>P - Prelegere S - Seminar L - Laborator PC - Proiect de Curs</p>
+                <p>EP - Evaluare periodică C - Consultație E - Examinare R - Reexaminare</p>
+                <p>SP - Seminar prealabil ST - Seminar de totalizare</p>
+            </div>
+        </div>
 </body>
 </html>

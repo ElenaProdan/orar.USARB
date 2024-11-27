@@ -1,8 +1,68 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #1d5c28;
+    font-family: Arial, sans-serif;
+
+    /* Устанавливаем фон */
+    background: url('/img/curtea.jpg') no-repeat center center fixed;
+
+    /* Размер изображения на 100% экрана */
+    background-size: cover;
+
+    /* Цвет на случай, если изображение не загрузится */
+    background-color: #136336;
+   
+}
+
+.container {
     display: flex;
-    scroll-behavior: smooth; /* Плавная прокрутка по ссылкам */
+    height: 100vh;
+}
+
+/* Левая часть */
+.left-side {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.dropdown-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+select {
+    width: 100%;
+    padding: 5px;
+}
+
+/* Таблица */
+.schedule-table, .time-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.schedule-table th, .schedule-table td,
+.time-table td {
+    border: 1px solid #000;
+    padding: 5px;
+    text-align: center;
+}
+
+.schedule-table th {
+    background-color: #ddd;
+}
+
 }
