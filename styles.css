@@ -1,22 +1,25 @@
 body {
+
     margin: 0;
-    padding: 0;
+    padding: 50px;
     font-family: Arial, sans-serif;
 
     /* Устанавливаем фон */
-    background: url('/img/curtea.jpg') no-repeat center center fixed;
+    background: url('universitet.jpeg') no-repeat center center fixed;
 
     /* Размер изображения на 100% экрана */
     background-size: cover;
 
     /* Цвет на случай, если изображение не загрузится */
     background-color: #136336;
+    
    
 }
 
 .container {
     display: flex;
     height: 100vh;
+    flex-wrap: wrap; /* Позволяет частям переноситься на новые строки */
 }
 
 /* Левая часть */
@@ -65,4 +68,55 @@ select {
     background-color: #ddd;
 }
 
+/* Правый блок */
+.right-side {
+    width: 50%; /* Правая половина экрана */
+    padding: 50px;
+    background-color: #f9f9f900;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: -5px 0 10px;
+    overflow-y: auto; /* Вертикальный скроллинг, если контент превышает высоту */
+}
+
+/* Заголовок */
+.university-title {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.schedule {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* 25% для времени, 75% для предметов */
+    gap: 5px; /* Отступы между ячейками */
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.time {
+    background-color: #007f3f;
+    color: #ffffffdc;
+    font-size: 1rem;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    border-right: 1px solid #dddddd93;
+}
+
+.subject {
+    background-color: #f9f9f9;
+    padding: 10px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.row {
+    display: contents;
 }
